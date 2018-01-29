@@ -69,7 +69,6 @@ class Mage_Api_Model_Server_Adapter_Soap
         if (isset($queryParams['wsdl'])) {
             unset($queryParams['wsdl']);
         }
-
         $wsdlConfig->setUrl(Mage::helper('api')->getServiceUrl('*/*/*', array('_query' => $queryParams), true));
         $wsdlConfig->setName('Magento');
         $wsdlConfig->setHandler($this->getHandler());

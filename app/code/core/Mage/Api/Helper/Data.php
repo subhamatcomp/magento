@@ -354,7 +354,7 @@ class Mage_Api_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getCacheId()
     {
-        return 'wsdl_config_global_' . md5($this->getServiceUrl('*/*/*'));
+        return 'wsdl_config_global_' . md5($this->getServiceUrl('*/*/*', array('__nosid' => true)));
     }
 
     /**
