@@ -171,7 +171,7 @@ final class Mage
             'major'     => '1',
             'minor'     => '9',
             'revision'  => '3',
-            'patch'     => '7',
+            'patch'     => '4',
             'stability' => '',
             'number'    => '',
         );
@@ -805,12 +805,7 @@ final class Mage
         static $loggers = array();
 
         $level  = is_null($level) ? Zend_Log::DEBUG : $level;
-        $file = empty($file) ? 'system.log' : basename($file);
-
-        // Validate file extension before save. Allowed file extensions: log, txt, html, csv
-        if (!self::helper('log')->isLogFileExtensionValid($file)) {
-            return;
-        }
+        $file = empty($file) ? 'system.log' : $file;
 
         try {
             if (!isset($loggers[$file])) {
