@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+  <JournalBlocks_location type="CwWidget/location">
+    <name>Student Block</name>
+    <description type="desc">Show Custom Message for Students</description>
+  </JournalBlocks_location>
+</widgets>

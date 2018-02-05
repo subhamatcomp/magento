@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Infopro_JournalBlocks>
+      <version>0.1.0</version>
+    </Infopro_JournalBlocks>
+  </modules>
+  <global>
+    <blocks>
+      <JournalBlocks>
+        <class>Cwdons_JournalBlocks_Block</class>
+      </JournalBlocks>
+    </blocks>
+    <helpers>
+    <JournalBlocks>
+        <class>Cwdons_JournalBlocks_Helper</class>
+      </JournalBlocks>
+    </helpers>
+  </global>
+</config>
