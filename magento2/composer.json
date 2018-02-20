@@ -10,7 +10,6 @@
     "require": {
         "magento/product-community-edition": "2.1.11",
         "composer/composer": "@alpha"
-		"subhamatcomp/magento" : 
     },
     "require-dev": {
 		"php" : "5.6",
