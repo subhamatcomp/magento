@@ -24,7 +24,7 @@
 		"php/intl": "5.6",
 		"php/mbstring": "5.6",
 		"php/curl": "5.6",
-		"mysql/client": "5.6",
+		"mysql/client": "5.6"
     },
     "config": {
         "use-include-path": true
