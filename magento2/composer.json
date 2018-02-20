@@ -10,8 +10,10 @@
     "require": {
         "magento/product-community-edition": "2.1.11",
         "composer/composer": "@alpha"
+		"subhamatcomp/magento" : 
     },
     "require-dev": {
+		"php" : "5.6",
         "phpunit/phpunit": "4.1.0",
         "squizlabs/php_codesniffer": "1.5.3",
         "phpmd/phpmd": "@stable",
@@ -21,9 +23,10 @@
         "sebastian/phpcpd": "2.0.0",
 		"php/gd": "5.6",
 		"php/intl": "5.6",
-		"php/mbstring": "5.6"
+		"php/mbstring": "5.6",
+		"php/curl": "5.6",
+		"mysql/client": "5.6",
     },
-	
     "config": {
         "use-include-path": true
     },
