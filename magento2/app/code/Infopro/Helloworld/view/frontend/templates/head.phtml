@@ -1,8 +1,0 @@
-<!-- Hello There -->
-<?php
-    $asset_repository = $this->assetRepository;
-    $asset  = $asset_repository->createAsset('Infopro_Helloworld::test.js');
-    $url    = $asset->getUrl();
-?>
-<!-- Hello There -->
-<script src="<?php echo $url; ?>"></script>
