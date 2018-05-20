@@ -1,0 +1,18 @@
+<?xml version = "1.0"?>
+<config>
+	<Custom_Customapimodule>
+		<version>1.0.0.0</version>
+	</Custom_Customapimodule>
+	<global>
+		<models>
+			<customapimodule>
+				<class>Custom_Customapimodule_Model</class>
+			</customapimodule>
+		</models>
+		<helpers>
+			<customapimodule>
+				<class>Custom_Customapimodule_Helper</class>
+			</customapimodule>
+		</helpers>
+	</global>
+</config>

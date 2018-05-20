@@ -1,0 +1,41 @@
+<?xml version = "1.0"?>
+<config>
+	<api>
+		<resources>
+			<customapimodule_api translate = "title" module = "customapimodule">
+				<model>customapimodule/operation_api</model>
+				<title>Demo Product List</title>
+				<acl>customapimodule/customapi</acl>
+				<methods>
+					<list translate = "title" module = "customapimodule">
+						<title>List of Product</title>
+						<method>Items</method>
+					</list>
+					<register translate = "title" module = "customapimodule">
+						<title>Create Customer</title>
+						<method>Create</method>
+					</register>
+				</methods>
+			</customapimodule_api>
+		</resources>
+		<resources_alias>
+			<customapi>customapimodule_api</customapi>
+		</resources_alias>
+		<v2>
+			<resources_function_prefix>
+				<customapi>customapimoduleApi</customapi>
+			</resources_function_prefix>
+		</v2>
+		<acl>
+			<resources>
+				<customapimodule translate = "title" module = "customapimodule">
+					<title>Products</title>
+					<sort_order>5</sort_order>
+					<customapi translate = "title" module = "customapimodule">
+						<title>Product data</title>
+					</customapi>
+				</customapimodule>
+			</resources>
+		</acl>
+	</api>
+</config>
