@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -8,15 +8,15 @@ namespace Magento\Test\Integrity\Xml;
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-class SchemaTest extends \PHPUnit_Framework_TestCase
+class SchemaTest extends \PHPUnit\Framework\TestCase
 {
     public function testXmlFiles()
     {
         $invoker = new \Magento\Framework\App\Utility\AggregateInvoker($this);
         $invoker(
-        /**
-         * @param string $filename
-         */
+            /**
+             * @param string $filename
+             */
             function ($filename) {
                 $dom = new \DOMDocument();
                 $xmlFile = file_get_contents($filename);
@@ -68,7 +68,7 @@ class SchemaTest extends \PHPUnit_Framework_TestCase
         $componentRegistrar = new ComponentRegistrar();
         $codeXml = [];
         foreach ($componentRegistrar->getPaths(ComponentRegistrar::MODULE) as $modulePath) {
-            $codeXml = array_merge($codeXml, $this->_getFiles($modulePath, '*.xml', '/.\/Test\/Unit\/./'));
+            $codeXml = array_merge($codeXml, $this->_getFiles($modulePath, '*.xml', '/.\/Test\/Unit/'));
         }
         $this->_filterSpecialCases($codeXml);
         $designXml = [];

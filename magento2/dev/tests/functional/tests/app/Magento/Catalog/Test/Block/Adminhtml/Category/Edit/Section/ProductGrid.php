@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -28,6 +28,14 @@ class ProductGrid extends Grid
         ],
         'name' => [
             'selector' => '#catalog_category_products_filter_name',
+        ],
+        'visibility' => [
+            'selector' => '#catalog_category_products_filter_visibility',
+            'input' => 'select',
+        ],
+        'status' => [
+            'selector' => '#catalog_category_products_filter_status',
+            'input' => 'select',
         ],
     ];
 

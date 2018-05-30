@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -22,6 +22,11 @@ class AppIsolation
      * @var \Magento\TestFramework\Application
      */
     private $_application;
+
+    /**
+     * @var array
+     */
+    private $serverGlobalBackup;
 
     /**
      * Constructor
@@ -52,16 +57,25 @@ class AppIsolation
      */
     public function startTestSuite()
     {
+        $this->serverGlobalBackup = $_SERVER;
         $this->_isolateApp();
+    }
+
+    /**
+     * Isolate application after running test case
+     */
+    public function endTestSuite()
+    {
+        $_SERVER = $this->serverGlobalBackup;
     }
 
     /**
      * Handler for 'endTest' event
      *
-     * @param \PHPUnit_Framework_TestCase $test
+     * @param \PHPUnit\Framework\TestCase $test
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function endTest(\PHPUnit_Framework_TestCase $test)
+    public function endTest(\PHPUnit\Framework\TestCase $test)
     {
         $this->_hasNonIsolatedTests = true;
 

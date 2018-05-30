@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -30,7 +30,7 @@ class RemoveProductsFromTheCartStep implements TestStepInterface
     private $cartPage;
 
     /**
-     * Quantity of items that should be removed from shoping cart.
+     * Quantity of items that should be removed from shopping cart.
      *
      * @var int|null
      */
